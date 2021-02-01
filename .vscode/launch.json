@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "2020-2021-3APP-MobDev-05",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "augmented_reality_plugin_wikitude",
+            "cwd": "plugin\\augmented_reality_plugin_wikitude",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
