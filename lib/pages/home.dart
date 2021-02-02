@@ -35,6 +35,11 @@ class _HomePageState extends State<HomePage> {
         await new Future.delayed(const Duration(seconds: 2));
       }
     });
+    getHandgelUse().then((handgel) async {
+      setState(() {
+        handgelUse = handgel;
+      });
+    });
   }
 
   getUserPermission() async {
