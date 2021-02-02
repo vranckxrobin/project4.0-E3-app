@@ -25,7 +25,7 @@ class UserApi {
     }
   }
 
-  static Future<User> updatePasswordUser(User user ,String password) async {
+  static Future<User> updatePasswordUser(User user, String password) async {
     final http.Response response = await http.put(
       url + 'user/' + user.id.toString(),
       headers: <String, String>{
@@ -39,6 +39,24 @@ class UserApi {
       return User.fromJson(resultList["result"]);
     } else {
       throw Exception(response.body);
+    }
+  }
+
+  static Future<String> getHandgelUse(User user) async {
+    final http.Response response = await http.get(
+      url + 'user/handgelLimit/' + user.id.toString(),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        'Authorization': 'Bearer ' + user.accessToken,
+      },
+    );
+    if (response.statusCode == 200) {
+      Map<String, dynamic> resultList = jsonDecode(response.body);
+      Map<String, dynamic> result = resultList["result"];
+      String handgelUse = result["handgels"];
+      return handgelUse;
+    } else {
+      return "";
     }
   }
 }

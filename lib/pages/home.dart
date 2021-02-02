@@ -17,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String authentication = "";
   bool createQrcodeVisible = false;
+  String handgelUse = "";
 
   getAuthentication() async {
     return QrController.getQrCode();
@@ -49,6 +50,10 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  getHandgelUse() async {
+    return await UserController.getHandgelUse();
+  }
+
   @override
   void initState() {
     super.initState();
@@ -64,6 +69,12 @@ class _HomePageState extends State<HomePage> {
         createQrcodeVisible = permission;
       });
     });
+
+    getHandgelUse().then((handgel) => {
+          setState(() {
+            handgelUse = handgel;
+          })
+        });
   }
 
   @override
@@ -110,6 +121,31 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ],
+                        ),
+                      ),
+                      Visibility(
+                        visible: handgelUse != "",
+                        child: SafeArea(
+                          child: Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Center(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    RichText(
+                                      text: TextSpan(
+                                        text: handgelUse + ' handgels',
+                                        style: TextStyle(
+                                          color: Theme.of(context).accentColor,
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                          ),
                         ),
                       ),
                       Container(

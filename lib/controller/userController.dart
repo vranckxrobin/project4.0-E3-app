@@ -29,4 +29,10 @@ class UserController {
       return false;
     });
   }
+
+  static Future<String> getHandgelUse() async {
+    User user = await AuthController.getUser();
+    String handgelUse = await UserApi.getHandgelUse(user);
+    return handgelUse;
+  }
 }
