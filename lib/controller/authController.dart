@@ -8,6 +8,9 @@ import 'package:smart_vendors/models/login.dart';
  
 Save authentication token internal storage.
 Save user object internal storage, for display the user object
+
+Save autologin boolean internal storage, for autologin or not
+Save login object internal storage, for autologin or not
 */
 class AuthController {
   static final String _authToken = "auth_token";

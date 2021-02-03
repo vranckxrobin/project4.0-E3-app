@@ -8,6 +8,7 @@ Usercontroller
 */
 class UserController {
   static Future<bool> login({String email, String password}) async {
+    //login user
     return UserApi.loginUser(email: email, password: password).then((user) {
       // set user
       AuthController.setUser(user);
@@ -19,6 +20,7 @@ class UserController {
     });
   }
 
+  //update the password for the user that is logged in
   static Future<bool> updatePassword({String email, String password}) async {
     User user = await AuthController.getUser();
     return UserApi.updatePasswordUser(user, password).then((user) {
@@ -30,6 +32,7 @@ class UserController {
     });
   }
 
+//see how many hand gels you have used
   static Future<String> getHandgelUse() async {
     User user = await AuthController.getUser();
     String handgelUse = await UserApi.getHandgelUse(user);

@@ -8,6 +8,7 @@ import 'package:smart_vendors/widgets/BottomAppBarSmartVendors.dart';
 import 'package:smart_vendors/controller/authController.dart';
 import 'package:smart_vendors/models/login.dart';
 
+//page where you can update your password
 class ProfilePage extends StatefulWidget {
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -103,7 +104,7 @@ class _ProfilePageState extends State<ProfilePage> {
         SizedBox(
           height: 50,
         ),
-        TextFieldGshop(
+        TextFieldSmartVendors(
           labelText: "wachwoord",
           icon: Icon(
             Icons.vpn_key,
@@ -116,7 +117,7 @@ class _ProfilePageState extends State<ProfilePage> {
         SizedBox(
           height: 20,
         ),
-        TextFieldGshop(
+        TextFieldSmartVendors(
           labelText: "bevestig wachtwoord",
           icon: Icon(
             Icons.vpn_key,

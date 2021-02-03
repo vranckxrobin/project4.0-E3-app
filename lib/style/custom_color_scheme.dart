@@ -16,18 +16,18 @@ MaterialColor garnotecColor = const MaterialColor(
   },
 );
 
-const gshopErrorRed = Color(0xFFC5032B);
-const gShopBackgroundWhite = Color(0xFFF0F0F0);
-const gshopCMT = Color(0xFFF88604);
+const smartVendorsErrorRed = Color(0xFFC5032B);
+const smartVendorsBackgroundWhite = Color(0xFFF0F0F0);
+const smartVendorsCMT = Color(0xFFF88604);
 
-const gshopAccent = Color(0xFF9EA0A9);
+const smartVendorsAccent = Color(0xFF9EA0A9);
 
-final ThemeData gShopTheme = _buildGshopTheme();
+final ThemeData smartVendorsTheme = _buildSmartVendorsTheme();
 
-ThemeData _buildGshopTheme() {
+ThemeData _buildSmartVendorsTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-      accentColor: gshopAccent,
+      accentColor: smartVendorsAccent,
       primaryColor: garnotecColor,
       canvasColor: Colors.transparent,
       buttonTheme: base.buttonTheme.copyWith(
@@ -41,28 +41,28 @@ ThemeData _buildGshopTheme() {
         buttonTextTheme: ButtonTextTheme.accent,
       ),
       buttonColor: garnotecColor,
-      scaffoldBackgroundColor: gShopBackgroundWhite,
+      scaffoldBackgroundColor: smartVendorsBackgroundWhite,
       // textSelectionColor: garnotecColor.shade100,
-      errorColor: gshopErrorRed,
-      textTheme: _buildGshopTextTheme(base.textTheme),
-      primaryTextTheme: _buildGshopTextTheme(base.primaryTextTheme),
-      accentTextTheme: _buildGshopTextTheme(base.accentTextTheme),
+      errorColor: smartVendorsErrorRed,
+      textTheme: _buildSmartVendorsTextTheme(base.textTheme),
+      primaryTextTheme: _buildSmartVendorsTextTheme(base.primaryTextTheme),
+      accentTextTheme: _buildSmartVendorsTextTheme(base.accentTextTheme),
       primaryColorLight: garnotecColor.shade200,
-      indicatorColor: gshopCMT,
-      primaryIconTheme: IconThemeData(color: gshopAccent),
-      iconTheme: IconThemeData(color: gshopAccent),
+      indicatorColor: smartVendorsCMT,
+      primaryIconTheme: IconThemeData(color: smartVendorsAccent),
+      iconTheme: IconThemeData(color: smartVendorsAccent),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        foregroundColor: gshopAccent,
+        foregroundColor: smartVendorsAccent,
       ));
 }
 
-TextTheme _buildGshopTextTheme(TextTheme base) {
+TextTheme _buildSmartVendorsTextTheme(TextTheme base) {
   return base
       .copyWith(
           bodyText2: base.bodyText2.copyWith(
             fontWeight: FontWeight.w500,
             fontSize: 16.0,
-            color: gshopAccent,
+            color: smartVendorsAccent,
           ),
           headline2: base.headline2.copyWith(
             fontFamily: 'Poppins',

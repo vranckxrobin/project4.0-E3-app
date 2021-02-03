@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:singleton/singleton.dart';
 
 /*
-SnackbarNotification 
+AlertNotification 
 You can call where every you wont. 
 */
 class AlertController {
@@ -39,6 +39,7 @@ class AlertController {
     );
   }
 
+  //types of alerts
   _cases() {
     switch (this.type) {
       case "INFO":

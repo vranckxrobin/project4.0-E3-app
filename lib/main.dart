@@ -3,8 +3,6 @@ import 'package:get/route_manager.dart';
 import 'style/custom_color_scheme.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:smart_vendors/pages/routeGenerator.dart';
-import 'package:smart_vendors/controller/alertController.dart';
-import 'package:smart_vendors/controller/userController.dart';
 
 Future main() async {
   // envioment variable
@@ -12,7 +10,6 @@ Future main() async {
   //...runapp
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SmartVendors',
-      theme: gShopTheme,
+      theme: smartVendorsTheme,
       initialRoute: '/',
       // Work with Generate routes
       onGenerateRoute: RouteGenerator.generateRoute,

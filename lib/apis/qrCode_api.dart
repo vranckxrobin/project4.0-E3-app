@@ -1,5 +1,4 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:smart_vendors/models/auth.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/user.dart';
@@ -7,7 +6,7 @@ import '../models/user.dart';
 class QrCodeApi {
   static String url = DotEnv().env['API_URL'];
 
-  //Login user get authentication token back
+  //getQrCode for user
   static Future<String> getQrCode(User user) async {
     final http.Response response = await http.get(
       url + 'authentication/user/' + user.id.toString(),
@@ -25,7 +24,7 @@ class QrCodeApi {
       return "";
     }
   }
-
+  //createQrcode for user
   static Future<String> createQrcode(User user) async {
     final http.Response response =
         await http.post(url + 'authentication/', headers: <String, String>{

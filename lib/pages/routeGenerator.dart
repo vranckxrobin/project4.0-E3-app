@@ -3,10 +3,9 @@ import 'package:smart_vendors/pages/home.dart';
 import 'package:smart_vendors/pages/login.dart';
 import 'package:smart_vendors/pages/profile.dart';
 
+//routes to navigate to other pages
 class RouteGenerator {
   static Route generateRoute(RouteSettings settings) {
-    // final args = settings.arguments;
-
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => LoginPage());

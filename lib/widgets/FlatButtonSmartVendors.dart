@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Default design button Gshop
+// Default design button SmartVendors
 class FlatButtonSmartVendors extends StatelessWidget {
   const FlatButtonSmartVendors({
     Key key,

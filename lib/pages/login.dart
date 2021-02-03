@@ -7,6 +7,7 @@ import 'package:smart_vendors/widgets/TextFieldSmartVendors.dart';
 import 'package:smart_vendors/controller/authController.dart';
 import 'package:smart_vendors/models/login.dart';
 
+//login page
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -113,11 +114,9 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButtonGshop(),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // bottomNavigationBar: BottomAppBarGshop(),
     );
   }
+//login page form
 
   _inputForm() {
     return Column(
@@ -125,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
         SizedBox(
           height: 50,
         ),
-        TextFieldGshop(
+        TextFieldSmartVendors(
           labelText: "email",
           icon: Icon(
             Icons.email,
@@ -137,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
         SizedBox(
           height: 20,
         ),
-        TextFieldGshop(
+        TextFieldSmartVendors(
           labelText: "Wachtwoord",
           icon: Icon(
             Icons.vpn_key,

@@ -9,6 +9,8 @@ import 'package:smart_vendors/controller/userController.dart';
 import 'package:smart_vendors/controller/alertController.dart';
 import 'package:smart_vendors/controller/authController.dart';
 
+
+//show qr code,shows limit hand gels and lets you get a new qrcode 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();

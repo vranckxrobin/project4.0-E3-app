@@ -12,10 +12,11 @@ class CounterButtonSmartVendors extends StatefulWidget {
   final MainAxisAlignment mainAxisAlignment;
 
   @override
-  _CounterButtonGshopState createState() => _CounterButtonGshopState();
+  _CounterButtonSmartVendorsState createState() =>
+      _CounterButtonSmartVendorsState();
 }
 
-class _CounterButtonGshopState extends State<CounterButtonSmartVendors> {
+class _CounterButtonSmartVendorsState extends State<CounterButtonSmartVendors> {
   num _quantity = 1;
   void changeQuantity() {
     widget.onChangeQuantity.call(_quantity);

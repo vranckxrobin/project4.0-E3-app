@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-// Default Textield button Gshop
-class TextFieldGshop extends StatelessWidget {
-  const TextFieldGshop({
+// Default Textield button SmartVendors
+class TextFieldSmartVendors extends StatelessWidget {
+  const TextFieldSmartVendors({
     Key key,
     @required this.context,
     @required this.labelText,
